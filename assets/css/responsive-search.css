@@ -1,0 +1,107 @@
+@media (min-width:740px) and (max-width:1023px){
+    .header{
+        padding: 0 40px;
+    }
+    .container__header{
+        padding: 0 40px;
+    }
+    .header__tab-item .header__tab-kezhan,
+    .header__tab-item .header__tab-container{
+        display: none;
+    }
+    .header__menu-item-anytime-list{
+        width: 500px;
+        right: -190px;
+    }
+    .header__menu-item-anytime-calender{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .container__content.grid.wide{
+        max-width: calc(100% - 80px);
+    }
+    .container__content-item-img{
+        height: 250px;
+    }
+    .footer__copyright.grid.wide{
+        max-width: calc(100% - 80px);
+    }
+    .footer__copyright-container{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .footer__copyright-list{
+        padding-top: 0;
+    }
+    .footer__container.grid.wide{
+        max-width: calc(100% - 80px);
+    }
+    .footer__container-content{
+        padding-bottom: 0;
+    }
+    .footer__container-item-list{
+        display:flex;
+        flex-wrap: wrap;
+    }
+    .footer__container-item-text{
+        padding-right: 15px;
+        flex: 0 0 33.33333%;
+    }
+    .footer__container-item-list{
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid #dddddd;
+        line-height: 20px;
+    }
+    .footer__container-content .footer__container-item:last-child .footer__container-item-list{
+        border: 0;
+    }
+}
+@media (max-width:739px){
+    .header{
+        padding: 0 20px;
+    }
+    .header__logo{
+        justify-content: center;
+    }
+    .header__user{
+        display: none;
+    }
+    .header__menu-item{
+        display: none;
+    }
+    .header__tab-item .header__tab-kezhan,
+    .header__tab-item .header__tab-container{
+        display: none;
+    }
+    .header__tab-other-content{
+        left: -130px;
+    }
+    .container__header{
+        padding: 0 20px;
+    }
+    .container__content.grid.wide{
+        max-width: calc(100% - 40px);
+    }
+    .container__footer-stt-item{
+        margin: 0;
+    }
+    .footer__copyright.grid.wide{
+        max-width: calc(100% - 40px);
+    }
+    .footer__container.grid.wide{
+        max-width: calc(100% - 40px);
+    }
+    .footer__container-item-list{
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+    .footer__copyright-container{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .footer__copyright-list{
+        text-align: center;
+        padding-top: 0;
+    }
+}

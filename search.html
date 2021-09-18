@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web_airbnb</title>
+    <link rel="stylesheet" href="./assets/css/search.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive-search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="header__logo">
+                <div class="header__logo-content">
+                    <a href="#" class="header__logo-icon">
+                        <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                    </a>
+                    <div class="header__logo-name">20Cm</div>
+                </div>
+            </div>
+            <div class="header__user">
+                <div class="header__user-text">Trở thành chủ nhà</div>
+                <div class="header__user-global">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                </div>
+                <label for="header__user_checkbox" >
+                    <div class="header__user-account" >
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                        <i class="fa fa-user-circle header__user-account-icon" aria-hidden="true"></i>
+                        <input type="checkbox" class="header__user-checkbox" hidden id="header__user_checkbox">
+                        <div class="header__user-content">
+                            <ul class="header__user-list">
+                                <li class="header__user-item">Đăng ký</li>
+                                <li class="header__user-item">Đăng nhập</li>
+                            </ul>
+                            <div class="header__user-border"></div>
+                            <ul class="header__user-list">
+                                <li class="header__user-item">Cho thuê nhà</li>
+                                <li class="header__user-item">Tổ chức trải nghiệm</li>
+                                <li class="header__user-item">Trợ giúp</li>
+                            </ul>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="container">
+            <input type="radio"hidden name="navbar" class="tab__treehouse" id="home_tree" checked>
+            <input type="radio"hidden name="navbar"class="tab__lake" id="lake">
+            <input type="radio"hidden name="navbar"class="tab__kezhan" id="kezhan">
+            <input type="radio"hidden name="navbar"class="tab__container" id="home_container">
+            <div class="container__header">
+                <div class="header__tabs">
+                    <div class="header__tab-item">
+                        <label for="home_tree" class="header__tab-hometree">
+                            <img src="./assets/img/treehome.jpg" class="header__tab-item-img img-active" alt="">
+                            Nhà trên cây
+                        </label>
+                        <label for="lake"class="header__tab-lake">
+                            <img src="./assets/img/lake.jpg" class="header__tab-item-img img-active" alt="">
+                            Hồ bơi Tuyệt vời
+                        </label>
+                        <label for="kezhan"class="header__tab-kezhan">
+                            <img src="./assets/img/kezhan.jpg" class="header__tab-item-img img-active" alt="">
+                            Kezhan
+                        </label>
+                        <label for="home_container"class="header__tab-container">
+                            <img src="./assets/img/container.jpg" class="header__tab-item-img img-active" alt="">
+                            Nhà container
+                        </label>
+                        <label for="other"class="header__tab-other">
+                            Thêm
+                            <i class="fa fa-angle-down " aria-hidden="true"></i>
+                            <input type="checkbox"hidden id="other" class="tab__other">
+                            <div class="header__tab-other-content">
+                                <ul class="header__tab-other-list">
+                                    <li class="header__tab-other-item">Hướng biển</li>
+                                    <li class="header__tab-other-item">Ryoken</li>
+                                    <li class="header__tab-other-item">Nhà nhỏ</li>
+                                    <li class="header__tab-other-item">Đảo</li>
+                                    <li class="header__tab-other-item">Cabin</li>
+                                    <li class="header__tab-other-item">Nhà mái vòm</li>
+                                    <li class="header__tab-other-item">Trang trại</li>
+                                    <li class="header__tab-other-item">Lâu đài</li>
+                                    <li class="header__tab-other-item">Xe cắm trại</li>
+                                    <li class="header__tab-other-item">Nhà thuyền</li>
+                                </ul>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="header__menu">
+                    <input type="checkbox"hidden class="header__menu-anytime" name="menu" id="anytime">
+                    <input type="checkbox"hidden class="header__menu-guest" name="menu" id="guest" >
+                    <input type="checkbox"hidden class="header__menu-filter" name="menu" id="filter" >
+                    <div class="header__menu-item">
+                        <label for="anytime" class="header__menu-item-anytime">
+                            Bất cứ lúc nào
+                            <i class="fa fa-angle-down " aria-hidden="true"></i>
+                            <div class="header__menu-item-anytime-list">
+                                <div class="header__menu-item-anytime-selection">
+                                    <div class="header__menu-item-anytime-header">
+                                        Ngày linh hoạt
+                                    </div>
+                                    <p>Bạn muốn ở trong bao lâu?</p>
+                                    <div class="header__menu-item-anytime-time">
+                                        <span>Cuối tuần</span>
+                                        <span>1 tuần</span>
+                                        <span>1 tháng</span>
+                                    </div>
+                                    <p>Bạn muốn đi khi nào?</p>
+                                    <div class="header__menu-item-anytime-calender">
+                                        <label for="">
+                                            <img src="./assets/img/calander1.jpg" alt="">
+                                            <p>Tháng 9</p>
+                                        </label>
+                                        <label for="">
+                                            <img src="./assets/img/calander1.jpg" alt="">
+                                            <p>Tháng 10</p>
+                                        </label>
+                                        <label for="">
+                                            <img src="./assets/img/calander1.jpg" alt="">
+                                            <p>Tháng 11</p>
+                                        </label>
+                                        <label for="">
+                                            <img src="./assets/img/calander1.jpg" alt="">
+                                            <p>Tháng 12</p>
+                                        </label>
+                                        <label for="">
+                                            <img src="./assets/img/calander1.jpg" alt="">
+                                            <p>Tháng 1</p>
+                                        </label>
+                                        <label for="">
+                                            <img src="./assets/img/calander1.jpg" alt="">
+                                            <p>Tháng 2</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="header__menu-item-anytime-save">
+                                    <span>Lưu</span>
+                                </div>
+                            </div>
+                        </label>
+                        <label for="guest"class="header__menu-item-guest">
+                            Khách
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            <div class="header__menu-item-guest-list">
+                                <div class="header__menu-item-guest-old">
+                                    <div class="header__menu-item-guest-old-item">
+                                        <div class="header__menu-item-guest-name">
+                                            <p>Người lớn</p>
+                                            <p>Từ 13 tuổi trở lên</p>
+                                        </div>
+                                        <div class="header__menu-item-guest-old-quantity">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                            <p>0</p>
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="header__menu-item-guest-old-item">
+                                        <div class="header__menu-item-guest-name">
+                                            <p>Trẻ am</p>
+                                            <p>Độ tuổi 2 - 12</p>
+                                        </div>
+                                        <div class="header__menu-item-guest-old-quantity">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                            <p>0</p>
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="header__menu-item-guest-old-item">
+                                        <div class="header__menu-item-guest-name">
+                                            <p>Em bé</p>
+                                            <p>Dưới 2 tuổi</p>
+                                        </div>
+                                        <div class="header__menu-item-guest-old-quantity">
+                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                            <p>0</p>
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>  
+                                <div class="header__menu-item-guest-saveerase">
+                                    <div class="header__menu-item-guest-erase">
+                                        <p>Xóa</p>
+                                    </div>
+                                    <div class="header__menu-item-guest-save">
+                                        <p>Lưu</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </label>
+                        <label for="filter"class="header__menu-item-filter">
+                            <i class="fa fa-exchange" aria-hidden="true"></i>
+                            Bộ lọc
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="container__content grid wide">
+                <div class="container__content-treehouse">
+                    <div class="container__content-list row">
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/treehouse1.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Balamban, Central Visayas</span>
+                                <span>$309/đêm</span>
+                            </div>
+                            <p>Cách 1.825km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/treehouse2.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Baguio, Cordillera Administrative Region, Philippines</span>
+                                <span>$231/đêm</span>
+                            </div>
+                            <p>Cách 1.371km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/treehouse3.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Fagu, Himachal Pradesh, Ấn Độ</span>
+                                <span>$53/đêm</span>
+                            </div>
+                            <p>Cách 3.530km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/treehouse4.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Kecamatan Ubud, Bali, Indonesia</span>
+                                <span>$28/đêm</span>
+                            </div>
+                            <p>Cách 2.814km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/treehouse1.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Balamban, Central Visayas</span>
+                                <span>$309/đêm</span>
+                            </div>
+                            <p>Cách 1.825km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/treehouse2.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Baguio, Cordillera Administrative Region, Philippines</span>
+                                <span>$231/đêm</span>
+                            </div>
+                            <p>Cách 1.371km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/treehouse3.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Fagu, Himachal Pradesh, Ấn Độ</span>
+                                <span>$53/đêm</span>
+                            </div>
+                            <p>Cách 3.530km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/treehouse4.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Kecamatan Ubud, Bali, Indonesia</span>
+                                <span>$28/đêm</span>
+                            </div>
+                            <p>Cách 2.814km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/treehouse1.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Balamban, Central Visayas</span>
+                                <span>$309/đêm</span>
+                            </div>
+                            <p>Cách 1.825km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/treehouse2.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Baguio, Cordillera Administrative Region, Philippines</span>
+                                <span>$231/đêm</span>
+                            </div>
+                            <p>Cách 1.371km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/treehouse3.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Fagu, Himachal Pradesh, Ấn Độ</span>
+                                <span>$53/đêm</span>
+                            </div>
+                            <p>Cách 3.530km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/treehouse4.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Kecamatan Ubud, Bali, Indonesia</span>
+                                <span>$28/đêm</span>
+                            </div>
+                            <p>Cách 2.814km</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container__content-lake">
+                    <div class="container__content-list row">
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/lake1.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Sanya, Hainan</span>
+                                <span>$533/đêm</span>
+                            </div>
+                            <p>Cách 347</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/lake2.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Sanya, Hainan</span>
+                                <span>$301/đêm</span>
+                            </div>
+                            <p>Cách 336km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/lake3.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Sanya, Hainan</span>
+                                <span>$192/đêm</span>
+                            </div>
+                            <p>Cách 330km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/lake4.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Sanya, Hainan</span>
+                                <span>$172/đêm</span>
+                            </div>
+                            <p>Cách 214km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/lake1.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Sanya, Hainan</span>
+                                <span>$533/đêm</span>
+                            </div>
+                            <p>Cách 347</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/lake2.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Sanya, Hainan</span>
+                                <span>$301/đêm</span>
+                            </div>
+                            <p>Cách 336km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/lake3.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Sanya, Hainan</span>
+                                <span>$192/đêm</span>
+                            </div>
+                            <p>Cách 330km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/lake4.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Sanya, Hainan</span>
+                                <span>$172/đêm</span>
+                            </div>
+                            <p>Cách 214km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/lake1.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Sanya, Hainan</span>
+                                <span>$533/đêm</span>
+                            </div>
+                            <p>Cách 347</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/lake2.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Sanya, Hainan</span>
+                                <span>$301/đêm</span>
+                            </div>
+                            <p>Cách 336km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/lake3.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Sanya, Hainan</span>
+                                <span>$192/đêm</span>
+                            </div>
+                            <p>Cách 330km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/lake4.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Sanya, Hainan</span>
+                                <span>$172/đêm</span>
+                            </div>
+                            <p>Cách 214km</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container__content-kezhan">
+                    <div class="container__content-list row">
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/kezhan1.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Lijiang, Yunnan</span>
+                                <span>$39/đêm</span>
+                            </div>
+                            <p>Cách 1.825km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/kezhan2.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Dani, Yunnan</span>
+                                <span>$23/đêm</span>
+                            </div>
+                            <p>Cách 1.371km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/kezhan3.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Honghe,Yunnan</span>
+                                <span>$53/đêm</span>
+                            </div>
+                            <p>Cách 3.530km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/kezhan4.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Baoshan, Yunnan</span>
+                                <span>$28/đêm</span>
+                            </div>
+                            <p>Cách 2.814km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/kezhan1.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Lijiang, Yunnan</span>
+                                <span>$39/đêm</span>
+                            </div>
+                            <p>Cách 1.825km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/kezhan2.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Dani, Yunnan</span>
+                                <span>$23/đêm</span>
+                            </div>
+                            <p>Cách 1.371km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/kezhan3.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Honghe,Yunnan</span>
+                                <span>$53/đêm</span>
+                            </div>
+                            <p>Cách 3.530km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/kezhan4.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Baoshan, Yunnan</span>
+                                <span>$28/đêm</span>
+                            </div>
+                            <p>Cách 2.814km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/kezhan1.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Lijiang, Yunnan</span>
+                                <span>$39/đêm</span>
+                            </div>
+                            <p>Cách 1.825km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/kezhan2.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Dani, Yunnan</span>
+                                <span>$23/đêm</span>
+                            </div>
+                            <p>Cách 1.371km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/kezhan3.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Honghe,Yunnan</span>
+                                <span>$53/đêm</span>
+                            </div>
+                            <p>Cách 3.530km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/kezhan4.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Baoshan, Yunnan</span>
+                                <span>$28/đêm</span>
+                            </div>
+                            <p>Cách 2.814km</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container__content-container">
+                    <div class="container__content-list row">
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/container1.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Ba Vì, Hà Nội</span>
+                                <span>$177/đêm</span>
+                            </div>
+                            <p>Cách 649km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/container2.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Phuket</span>
+                                <span>$231/đêm</span>
+                            </div>
+                            <p>Cách 1.371km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/container3.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Phú Quốc, Kiên Giang</span>
+                                <span>$87/đêm</span>
+                            </div>
+                            <p>Cách 733km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/container4.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Tangalle, Southerm Province</span>
+                                <span>$385/đêm</span>
+                            </div>
+                            <p>Cách 3.814km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/container1.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Ba Vì, Hà Nội</span>
+                                <span>$177/đêm</span>
+                            </div>
+                            <p>Cách 649km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/container2.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Phuket</span>
+                                <span>$231/đêm</span>
+                            </div>
+                            <p>Cách 1.371km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/container3.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Phú Quốc, Kiên Giang</span>
+                                <span>$87/đêm</span>
+                            </div>
+                            <p>Cách 733km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/container4.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Tangalle, Southerm Province</span>
+                                <span>$385/đêm</span>
+                            </div>
+                            <p>Cách 3.814km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/container1.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Ba Vì, Hà Nội</span>
+                                <span>$177/đêm</span>
+                            </div>
+                            <p>Cách 649km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/container2.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Phuket</span>
+                                <span>$231/đêm</span>
+                            </div>
+                            <p>Cách 1.371km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/container3.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Phú Quốc, Kiên Giang</span>
+                                <span>$87/đêm</span>
+                            </div>
+                            <p>Cách 733km</p>
+                        </div>
+                        <div class="container__content-item col l-3 m-4 c-12">
+                            <img src="./assets/img/container4.jpg" alt="" class="container__content-item-img">
+                            <div class="container__content-item-content">
+                                <span>Tangalle, Southerm Province</span>
+                                <span>$385/đêm</span>
+                            </div>
+                            <p>Cách 3.814km</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container__footer">
+                    <ul class="container__footer-stt">
+                        <li class="container__footer-stt-item">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        </li>
+                        <li class="container__footer-stt-item active">1</li>
+                        <li class="container__footer-stt-item">2</li>
+                        <li class="container__footer-stt-item">3</li>
+                        <li class="container__footer-stt-item">4</li>
+                        <li class="container__footer-stt-item">5</li>
+                        <li class="container__footer-stt-item">...</li>
+                        <li class="container__footer-stt-item">15</li>
+                        <li class="container__footer-stt-item">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </li>
+                    </ul>
+                    <p class="container_footer-text">1-20 trong số hơn 300 chỗ ở</p>
+                    <p class="container__footer-appendix">Nhập ngày để xem giá đầy đủ. Áp dụng thu phí. Có thể phát sinh thuế</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer__container grid wide">
+                <div class="footer__container-content row">
+                    <div class="footer__container-item col l-3">
+                        <h3 class="footer__container-item-header">Giới thiệu</h3>
+                        <ul class="footer__container-item-list">
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Phương thức hoạt động của 20Cm</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Trang tin tức</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">20Cm 2021</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Nhà đầu tư</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">20Cm Plus</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">20Cm Luxe</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">HotelTonight</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">20Cm for Work</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Nhờ có Host, mọi điều đều có thể</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Cơ hội nghề nghiệp</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Thư của nhà sáng lập</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__container-item col l-3">
+                        <h3 class="footer__container-item-header">Cộng đồng</h3>
+                        <ul class="footer__container-item-list">
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Sự đa dạng và cảm giác thân thuộc</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Tiện nghi phù hợp với người có nhu cầu đặc biệt</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Đối tác liên kết 20Cm</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Đón tiếp người tị nạn</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Lượt giới thiệu của khách</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">20Cm.org</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__container-item col l-3">
+                        <h3 class="footer__container-item-header">Đón tiếp khách</h3>
+                        <ul class="footer__container-item-list">
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Cho thuê nhà</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Tổ chức trải nghiệm trực tuyến</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Tổ chức trải nghiệm</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Đón tiếp khách có trách nhiệm</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Trung tâm tài nguyên</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Trung tâm cộng đồng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__container-item col l-3">
+                        <h3 class="footer__container-item-header">Hỗ trợ</h3>
+                        <ul class="footer__container-item-list">
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Biện pháp ứng phó với đại dịch VOVID-19 của chúng tôi</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Các tùy chọn hủy</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Hỗ trợ khu dân cư</a>
+                            </li>
+                            <li class="footer__container-item-text">
+                                <a href="" class="">Tin cậy và an toàn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright grid wide">
+                <div class="footer__copyright-container row">
+                    <ul class="footer__copyright-list col l-6">
+                        <li class="footer__copyright-item">© 2021 20Cm,lnc.</li>
+                        <span>·</span>
+                        <li class="footer__copyright-item">
+                            <a href="">Quyền riêng tư</a>
+                        </li>
+                        <span>·</span>
+                        <li class="footer__copyright-item">
+                            <a href="">Điều khoản</a>
+                        </li>
+                        <span>·</span>
+                        <li class="footer__copyright-item">
+                            <a href="">Sơ đồ trang web</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__copyright-social col l-6">
+                        <li class="footer__copyright-social-item-language">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                            <a href="">Tiếng Việt(VN)</a>
+                        </li>
+                        <li class="footer__copyright-social-item-money">
+                            <i class="fa fa-usd" aria-hidden="true"></i>
+                            <a href="">USD</a>
+                        </li>
+                        <li class="footer__copyright-social-item-mxh">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var home=document.querySelector('.header__logo-content')
+        home.onclick=function(){
+        window.location.href='./index.html'
+        }
+    </script>
+</body>
+</html>

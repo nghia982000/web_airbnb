@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web_airbnb</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="header__logo">
+                <div class="header__logo-content">
+                    <a href="#" class="header__logo-icon">
+                        <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                    </a>
+                    <div class="header__logo-name">20Cm</div>
+                </div>
+            </div>
+            <div class="header__search">
+                <div class="header__search-content">
+                    <div class="header__search-text">Bắt đầu tìm kiếm</div>
+                    <div class="header__search-icon">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="header__user">
+                <div class="header__user-text">Trở thành chủ nhà</div>
+                <div class="header__user-global">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                </div>
+                <label for="header__user_checkbox" >
+                    <div class="header__user-account" >
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                        <i class="fa fa-user-circle header__user-account-icon" aria-hidden="true"></i>
+                        <input type="checkbox" class="header__user-checkbox" hidden id="header__user_checkbox">
+                        <div class="header__user-content">
+                            <ul class="header__user-list">
+                                <li class="header__user-item">Đăng ký</li>
+                                <li class="header__user-item">Đăng nhập</li>
+                            </ul>
+                            <div class="header__user-border"></div>
+                            <ul class="header__user-list">
+                                <li class="header__user-item">Cho thuê nhà</li>
+                                <li class="header__user-item">Tổ chức trải nghiệm</li>
+                                <li class="header__user-item">Trợ giúp</li>
+                            </ul>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="slider">
+            <div class="slider__content">
+                <div class="slider__text">Bạn chưa biết nên đi đâu? Tuyệt!</div>
+                <div class="slider__search">Tìm kiếm linh hoạt</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container__near grid wide">
+                <div class="container__near-text row">
+                    <p class="col l-12">Khám phá những điểm đến gần đây</p> 
+                </div>
+                <div class="container__near_scroll">
+                    <div class="container__near-content row">
+                        <div class="col l-3 m-4 c-4">
+                            <div class="container__near-item  ">
+                                <img src="./assets/img/HCM.jpg" alt="" class="container__near-item-img">
+                                <div class="container__near-item-name">
+                                    <p>Ho Chi Minh City</p>
+                                    <p>4 giờ lái xe</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-4">
+                            <div class="container__near-item  ">
+                                <img src="./assets/img/nha_trang.jpg" alt="" class="container__near-item-img">
+                                <div class="container__near-item-name">
+                                    <p>Nha Trang</p>
+                                    <p>2.5 giờ lái xe</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-4">
+                            <div class="container__near-item  ">
+                                <img src="./assets/img/hoi_an.png" alt="" class="container__near-item-img">
+                                <div class="container__near-item-name">
+                                    <p>Hôi An</p>
+                                    <p>8.5 giờ lái xe</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-0 c-0">
+                            <div class="container__near-item  ">
+                                <img src="./assets/img/vung_tau.png" alt="" class="container__near-item-img">
+                                <div class="container__near-item-name">
+                                    <p>Vung Tau City</p>
+                                    <p>4.5 giờ lái xe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container__near-content row">
+                        <div class="col l-3 m-4 c-4">
+                            <div class="container__near-item  ">
+                                <img src="./assets/img/can_tho.png" alt="" class="container__near-item-img">
+                                <div class="container__near-item-name">
+                                    <p>Can Tho City</p>
+                                    <p>6.5 giờ lái xe</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-4">
+                            <div class="container__near-item  ">
+                                <img src="./assets/img/tuy_hoa.jpg" alt="" class="container__near-item-img">
+                                <div class="container__near-item-name">
+                                    <p>Tuy Hòa</p>
+                                    <p>4 giờ lái xe</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-4">
+                            <div class="container__near-item  ">
+                                <img src="./assets/img/bien_hoa.png" alt="" class="container__near-item-img">
+                                <div class="container__near-item-name">
+                                    <p>Bien Hoa City</p>
+                                    <p>4 giờ lái xe</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-0 c-0">
+                            <div class="container__near-item  ">
+                                <img src="./assets/img/phan_rang.jpg" alt="" class="container__near-item-img">
+                                <div class="container__near-item-name">
+                                    <p>Phan Rang-Thap Cham</p>
+                                    <p>2 giờ lái xe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__wherever grid wide ">
+                <div class="container__wherever-text row ">
+                    <p class="col l-12">Ở bất cứ đâu</p>
+                </div>
+                <div class="container__wherever-scroll">
+                    <div class="container__wherever-content row">
+                        <div class="container__wherever-item col l-3 m-4 c-4 ">
+                            <img src="./assets/img/ngoai_troi.jpg" alt="" class="container__wherever-item-img">
+                            <p>Nơi nghỉ dưỡng ngoài trời</p>
+                        </div>
+                        <div class="container__wherever-item col l-3 m-4 c-4 ">
+                            <img src="./assets/img/doc_dao.jpg" alt="" class="container__wherever-item-img">
+                            <p>Chỗ ở độc đáo</p>
+                        </div>
+                        <div class="container__wherever-item col l-3 m-4 c-4 ">
+                            <img src="./assets/img/ful_nha.jpg" alt="" class="container__wherever-item-img">
+                            <p>Toàn bộ nhà</p>
+                        </div>
+                        <div class="container__wherever-item col l-3 m-0 c-0">
+                            <img src="./assets/img/thu_cung.jpg" alt="" class="container__wherever-item-img">
+                            <p>Cho phép mang thú cưng</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__wcguest grid wide">
+                <div class="container__wcguest-content">
+                    <p class="container__wcguest-header">Thử đón tiếp khách</p>
+                    <p class="container__wcguest-text">Kiếm thêm thu nhập và khám phá các cơ hội mới bằng cách chia sẻ nơi ở của bạn</p>
+                    <div class="container__wcguest-btn">Tìm hiểu thêm</div>
+                </div>
+            </div>
+            <div class="container__experience grid wide">
+                <div class="container__experience-text row">
+                    <p class="col l-12">Khám phá những điều nên trải nghiệm</p>
+                </div>
+                <div class="container__experience-scroll">
+                    <div class="container__experience-content row">
+                        <div class="container__experience-item col l-4 m-4 c-4 ">
+                            <img src="./assets/img/trai_nghiem.jpg" alt="" class="container__experience-item-img">
+                            <h3>Trải nghiệm</h3>
+                            <p>Tìm các hoạt động khó quên gần bạn.</p>
+                        </div>
+                        <div class="container__experience-item col l-4 m-4 c-4 ">
+                            <img src="./assets/img/truc_tuyen.jpg" alt="" class="container__experience-item-img">
+                            <h3>Trải nghiệm trực tuyến</h3>
+                            <p>Các hoạt động tương tác, truyền trực tiếp dưới sự dẫn dắt của người tổ chức.</p>
+                        </div>
+                        <div class="container__experience-item col l-4 m-4 c-4 ">
+                            <img src="./assets/img/phieu_du.jpg" alt="" class="container__experience-item-img">
+                            <h3>Bộ sưu tập nổi bật: Phiêu du</h3>
+                            <p>Du lịch tại nhà với trải nghiệm trực tuyến.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer__container grid wide">
+                <div class="footer__container-content row">
+                    <div class="footer__container-item col l-3 m-12 c-12">
+                        <h3 class="footer__container-item-header">Giới thiệu</h3>
+                        <ul class="footer__container-item-list">
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Phương thức hoạt động của 20Cm</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Trang tin tức</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">20Cm 2021</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Nhà đầu tư</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">20Cm Plus</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">20Cm Luxe</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">HotelTonight</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">20Cm for Work</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Nhờ có Host, mọi điều đều có thể</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Cơ hội nghề nghiệp</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Thư của nhà sáng lập</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__container-item col l-3 m-12 c-12">
+                        <h3 class="footer__container-item-header">Cộng đồng</h3>
+                        <ul class="footer__container-item-list">
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Sự đa dạng và cảm giác thân thuộc</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Tiện nghi phù hợp với người có nhu cầu đặc biệt</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Đối tác liên kết 20Cm</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Đón tiếp người tị nạn</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Lượt giới thiệu của khách</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">20Cm.org</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__container-item col l-3 m-12 c-12">
+                        <h3 class="footer__container-item-header">Đón tiếp khách</h3>
+                        <ul class="footer__container-item-list">
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Cho thuê nhà</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Tổ chức trải nghiệm trực tuyến</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Tổ chức trải nghiệm</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Đón tiếp khách có trách nhiệm</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Trung tâm tài nguyên</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Trung tâm cộng đồng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__container-item col l-3 m-12 c-12">
+                        <h3 class="footer__container-item-header">Hỗ trợ</h3>
+                        <ul class="footer__container-item-list">
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Biện pháp ứng phó với đại dịch VOVID-19 của chúng tôi</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Các tùy chọn hủy</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Hỗ trợ khu dân cư</a>
+                            </li>
+                            <li class="footer__container-item-text ">
+                                <a href="" class="">Tin cậy và an toàn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright grid wide">
+                <div class="footer__copyright-container row">
+                    <ul class="footer__copyright-list col l-6 m-12">
+                        <li class="footer__copyright-item">© 2021 20Cm,lnc.</li>
+                        <span>·</span>
+                        <li class="footer__copyright-item">
+                            <a href="">Quyền riêng tư</a>
+                        </li>
+                        <span>·</span>
+                        <li class="footer__copyright-item">
+                            <a href="">Điều khoản</a>
+                        </li>
+                        <span>·</span>
+                        <li class="footer__copyright-item">
+                            <a href="">Sơ đồ trang web</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__copyright-social col l-6 m-12">
+                        <li class="footer__copyright-social-item-language">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                            <a href="">Tiếng Việt(VN)</a>
+                        </li>
+                        <li class="footer__copyright-social-item-money">
+                            <i class="fa fa-usd" aria-hidden="true"></i>
+                            <a href="">USD</a>
+                        </li>
+                        <li class="footer__copyright-social-item-mxh">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal"> 
+        <div class="modal__container">
+            <div class="modal__close">
+                <div class="modal__close-icon">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="modal__content">
+                <input type="radio" name="tab" hidden class="modal-tab-language" id="modal-language"  checked>
+                <input type="radio" name="tab" hidden class="modal-tab-currency" id="modal-currency" >
+                <div class="modal__header-tab">
+                    <label for="modal-language" class="modal__header-tab-item-language">Ngôn ngữ và khu vực</label>
+                    <label for="modal-currency" class="modal__header-tab-item-currency">Loại tiền tệ</label>
+                </div>
+                <div class="modal__header-slider-language"></div>
+                <div class="modal__header-slider-currency"></div>
+                <div class="modal__content-language">
+                    <div class="modal__content-offical">
+                        <h2>Khu vực và ngôn ngữ được để xuất</h2>
+                        <ul class="modal__content-list">
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal__content-offical">
+                        <h2>Chọn ngôn ngữ và khu vực</h2>
+                        <ul class="modal__content-list">
+                            <li class="modal__content-item active">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Tiếng việt</p>
+                                <p>Việt Nam</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal__content-currency">
+                    <div class="modal__content-offical">
+                        <h2>Chọn loại tiền tệ</h2>
+                        <ul class="modal__content-list">
+                            <li class="modal__content-item active">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item ">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                            <li class="modal__content-item">
+                                <p>Đô la Mỹ</p>
+                                <p>USD - $</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script >
+        var search=document.querySelector('.slider__search')
+        var modal=document.querySelector('.modal')
+        var openModal=document.querySelector('.header__user-global')
+        var closeModal=document.querySelector('.modal__close')
+        var modalcontainer=document.querySelector('.modal__container')
+
+        openModal.onclick=function(){
+            modal.classList.add('open')
+        }
+        closeModal.onclick=function(){
+            modal.classList.remove('open')
+        }
+        modal.onclick=function(){
+            modal.classList.remove('open')
+        }
+
+        search.onclick=function(){
+        window.location.href='./search.html'
+        }
+        modalcontainer.addEventListener('click',function(event){
+            event.stopPropagation()
+        })
+
+    </script>
+</body>
+</html>
