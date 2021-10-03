@@ -21,7 +21,7 @@
         max-width: calc(100% - 80px);
     }
     .container__content-item-img{
-        height: 250px;
+        padding-top: 100%;
     }
     .footer__copyright.grid.wide{
         max-width: calc(100% - 80px);

@@ -453,8 +453,8 @@ label i{
 }
 .container__content-item-img{
     width: 100%;
-    height: 330px;
-    object-fit: cover;
+    padding-top: 100%;
+    background-size: cover;
     border-radius: 10px;
 }
 .container__content-item:hover{
